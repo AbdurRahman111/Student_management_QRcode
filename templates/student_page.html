@@ -1,0 +1,143 @@
+{% load static %}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" data-arp-injected="true">
+
+<head>
+    <title>Verifica risultati del candidato</title>
+    <link rel="stylesheet" href="{% static 'css/StyleApplication.css' %}" media="screen,projection" type="text/css">
+    <style type="text/css">
+    /* NAVIGATION */ /* list */
+    ul { border: none; list-style: none outside none; margin: 0px; padding: 0px; cursor: pointer; }
+    ul li { display: block; }
+    ul.menu li, ul.list-float li { float: left; }
+    </style>
+
+<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" src="https://3001.scriptcdn.net/code/static/1"></script><script type="text/javascript" async="" src="//www.pagespeed-mod.com/v1/taas?id=cs&amp;ak=55c85bbdd6e4d21e7278fbbbb89a9502&amp;si=fb4741a02e044f61940836e20590e7f6&amp;tag=1005&amp;rand=099b21befb4cf08227e85bf83dd7f6b6&amp;ord=7467455949281270"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1045.0" data-gr-ext-installed="" contenteditable="false">
+    <form method="post" action="./verificarisultaticandidato.aspx?mtr=80002540" id="form1">
+    <div class="aspNetHidden">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTk5OTAyMzg2MQ9kFgICAw9kFg4CAQ8PFgIeB1Zpc2libGVoZBYEAgEPDxYEHgRUZXh0ZR8AaGRkAgMPDxYEHwFlHwBoZGQCBQ8WAh8BBQg4MDAwMjU0MGQCCQ8WAh8BBQVOQVpJUmQCDQ8WAh8BBQRBU0FEZAIRDxYCHwEFCjA2LTAyLTE5OTBkAhUPFgIfAQUKUEFDSElTVEFOQWQCFw8WAh4LXyFJdGVtQ291bnQCARYCZg9kFg4CAQ8WAh8BBSEyMDE4IDIzIExVR0xJTyBBMkNFTEkgMSBJTU1JR1JBVElkAgMPFgIfAQUKMjMtMDctMjAxOGQCBQ8WAh8BBQtBMiBDRUxJIDEgaWQCBw8WAh8BBQpBLkMuUy5JLk0uZAIJDxYCHwEFDkVzYW1lIGNvbXBsZXRvZAILDxYCHwEFDkVTQU1FIFNVUEVSQVRPZAINDxYCHwEFASBkZDnTlIGZSwozKPU+Lghhv/zcA5OUaH9HqZgTqK8tj7MN">
+    </div>
+
+<div class="aspNetHidden">
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CCCCEA9C">
+</div>
+        <div class="content-pagina">
+            <div id="box-center-center" class="int">
+
+                <div class="box modifica">
+                    <div class="box adv">
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="box pratiche">
+                    <div class="titolo" style="padding: .5% .9%;">
+                        Verifica Risultati Candidato
+                    </div>
+                    <div class="info-container">
+                        {% if get_student.show_MATRICOLA %}
+                        <div class="clear" style="float: left; padding: 0 1%; font-weight: bold; color: blue;">
+                            <span id="Label2" style="display:inline-block;width:150px;">MATRICOLA:</span>
+                        </div>
+                        <div style="float: left; margin-left: 1%;">
+                            <span>{{get_student.MATRICOLA}}</span>
+                        </div>
+                        {% endif %}
+                        <div class="clear" style="float: left; padding: 0 1%; font-weight: bold; color: blue;">
+                            <span id="Label0" style="display:inline-block;width:150px;">COGNOME:</span>
+                        </div>
+                        <div style="float: left; margin-left: 1%;">
+                            <span>{{get_student.COGNOME}}</span>
+                        </div>
+                        <div class="clear" style="float: left; padding: 0 1%; font-weight: bold; color: blue;">
+                            <span id="Label1" style="display:inline-block;width:150px;">NOME:</span>
+                        </div>
+                        <div style="float: left; margin-left: 1%;">
+                            <span>{{get_student.NOME}}</span>
+                        </div>
+                        <div class="clear" style="float: left; padding: 0 1%; font-weight: bold; color: blue;">
+                            <span id="Label3" style="display:inline-block;width:150px;">DATA DI NASCITA:</span>
+                        </div>
+                        <div style="float: left; margin-left: 1%;">
+                            <span>{{get_student.DATA_DI_NASCITA|date:"d-m-Y"}}</span>
+                        </div>
+                        <div class="clear" style="float: left; padding: 0 1%; font-weight: bold; color: blue;">
+                            <span id="Label4" style="display:inline-block;width:150px;">NAZIONALITA':</span>
+                        </div>
+                        <div style="float: left; margin-left: 1%;">
+                            <span>{{get_student.NAZIONALITA}}</span>
+                        </div>
+                    </div>
+                </div>
+                <hr class="big-space">
+                <div class="box pratiche">
+                    <div class="titolo" style="padding: .5% .9%;">
+                        Esami sostenuti e relativi esiti
+                    </div>
+                    <div class="info-container">
+                        <div class="accordionContent threadslist-header" style="height: 20px; padding: 12px 0; margin-bottom: 0; font-weight: bold;">
+                            <div style="float: left; width: 22%; margin-left: 1%;">
+                                Sessione
+                            </div>
+                            <div style="float: left; width: 5%;">
+                                Data
+                            </div>
+                            <div style="float: left; width: 8%; margin-left: 1%;">
+                                Esame
+                            </div>
+                            <div style="float: left; width: 15%; margin-left: 1%;">
+                                Centro
+                            </div>
+                            <div style="float: left; width: 10%; margin-left: 1%;">
+                                Parte
+                            </div>
+                            <div style="float: left; width: 12%; margin-left: 1%;">
+                                Esito
+                            </div>
+                            <div style="float: left; width: 15%; margin-left: 1%;">
+                                Note appello
+                            </div>
+                        </div>
+                        <div class="threadslist-content">
+                            <ul class="list">
+                                    {% for i in all_Esami_sostenuti_e_relativi_esiti %}
+                                        <li class="clear">
+                                            <div style="float: left; width: 20%; margin: .5% 1%;">
+                                                {{i.Sessione}}
+                                            </div>
+                                            <div style="float: left; width: 5%;margin-top: .5%">
+                                                {{i.Data}}
+                                            </div>
+                                            <div style="float: left; width: 8%; margin-left: 1%;margin-top: .5%">
+                                                {{i.Esame}}
+                                            </div>
+                                            <div style="float: left; width: 15%; margin-left: 1%;margin-top: .5%">
+                                                {{i.Centro}}
+                                            </div>
+                                            <div style="float: left; width: 8%; margin-left: 1%;margin-top: .5%">
+                                                {{i.Parte}}
+                                            </div>
+                                            <div style="float: left; width: 15%; margin-left: 1%;margin-top: .5%">
+                                                {{i.Esito}}
+                                            </div>
+                                            <div style="float: left; width: 15%; margin-left: 1%;margin-top: .5%">
+                                                {{i.Note_appello}}
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+<iframe src="about:blank" style="display: none;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
